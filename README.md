@@ -1,11 +1,11 @@
 # Proyecto-Gestion-Culinaria-G03
 avance #1 desarrollo web
 
-# Proyecto: Gestión Culinaria - Grupo 03
+# Proyecto: RecetaHub - Grupo 03
 
 ## Descripción y Alcance
-Esta plataforma está diseñada para la gestión integral de recetas culinarias. Permite a los usuarios con rol de "Chef" administrar contenido profesional, mientras que los usuarios regulares pueden buscar recetas, organizar su menú semanal mediante un planificador y generar listas de compras automáticas basadas en sus selecciones.
-
+RecetaHub es una plataforma diseñada para la gestión integral de recetas culinarias. Permite a Chefs administrar contenido profesional y a usuarios regulares buscar recetas, organizar menús semanales y generar listas de compras.
+...
 ## Equipo de Trabajo
 * **Arquitecto de GitHub:** Rolando Aníbal Aguilar Navarro
 * **Analista de Requerimientos:** Luis Gerardo Morales Solano
