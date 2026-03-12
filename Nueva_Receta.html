@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrar Receta - Chef</title>
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACION -->
+  <nav>
+    <span>RecetaHub</span>
+    <a href="#">Catalogo</a>
+    <a href="#">Mi Perfil</a>
+    <a href="#" class="activo">+ Nueva Receta</a>
+    <span>Jorge M.</span>
+  </nav>
+
+  <div id="contenedor">
+
+    <!-- MENU LATERAL -->
+    <aside>
+      <p>MIS RECETAS</p>
+      <ul>
+        <li>Publicadas (12)</li>
+        <li>Borradores (3)</li>
+        <li class="activo">+ Nueva Receta</li>
+      </ul>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+      <h2>Nueva Receta</h2>
+      <p>Los campos con * son obligatorios</p>
+
+      <form>
+
+        <!-- SECCION: INFORMACION GENERAL -->
+        <section>
+          <h3>Informacion General</h3>
+
+          <label>Nombre de la receta *</label>
+          <input type="text" placeholder="Ej: Gallo Pinto Gourmet">
+
+          <label>Tipo de plato *</label>
+          <select>
+            <option>Seleccionar</option>
+            <option>Desayuno</option>
+            <option>Almuerzo</option>
+            <option>Cena</option>
+            <option>Postre</option>
+          </select>
+
+          <label>Dificultad *</label>
+          <select>
+            <option>Seleccionar</option>
+            <option>Facil</option>
+            <option>Intermedio</option>
+            <option>Avanzado</option>
+          </select>
+
+          <label>Tiempo de preparacion (minutos) *</label>
+          <input type="number" placeholder="30">
+
+          <label>Porciones *</label>
+          <input type="number" placeholder="4">
+
+          <label>Descripcion</label>
+          <textarea rows="3" placeholder="Describe brevemente la receta..."></textarea>
+        </section>
+
+        <!-- SECCION: IMAGEN -->
+        <section>
+          <h3>Imagen de la Receta</h3>
+          <input type="file" accept="image/*">
+        </section>
+
+        <!-- SECCION: INGREDIENTES -->
+        <section>
+          <h3>Ingredientes</h3>
+
+          <table border="1">
+            <thead>
+              <tr>
+                <th>Ingrediente</th>
+                <th>Cantidad</th>
+                <th>Unidad</th>
+                <th>Costo estimado</th>
+                <th>Eliminar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="text" placeholder="Ej: Arroz"></td>
+                <td><input type="number" placeholder="2"></td>
+                <td>
+                  <select>
+                    <option>tazas</option>
+                    <option>gramos</option>
+                    <option>unidades</option>
+                  </select>
+                </td>
+                <td><input type="number" placeholder="200"></td>
+                <td><button type="button">X</button></td>
+              </tr>
+              <tr>
+                <td><input type="text" placeholder="Ej: Frijoles"></td>
+                <td><input type="number" placeholder="1"></td>
+                <td>
+                  <select>
+                    <option>tazas</option>
+                    <option>gramos</option>
+                    <option>unidades</option>
+                  </select>
+                </td>
+                <td><input type="number" placeholder="150"></td>
+                <td><button type="button">X</button></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <button type="button">+ Agregar ingrediente</button>
+          <p>Costo estimado por porcion: ₡200</p>
+        </section>
+
+        <!-- SECCION: PASOS -->
+        <section>
+          <h3>Instrucciones paso a paso</h3>
+
+          <ol>
+            <li>
+              <textarea rows="2" placeholder="Describe el paso 1..."></textarea>
+            </li>
+            <li>
+              <textarea rows="2" placeholder="Describe el paso 2..."></textarea>
+            </li>
+            <li>
+              <textarea rows="2" placeholder="Describe el paso 3..."></textarea>
+            </li>
+          </ol>
+
+          <button type="button">+ Agregar paso</button>
+        </section>
+
+        <!-- BOTONES FINALES -->
+        <section>
+          <button type="button">Guardar borrador</button>
+          <button type="submit">Publicar receta</button>
+        </section>
+
+      </form>
+    </main>
+
+  </div><!-- fin contenedor -->
+
+</body>
+</html>

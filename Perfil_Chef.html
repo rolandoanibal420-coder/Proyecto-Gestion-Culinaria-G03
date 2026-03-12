@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfil del Chef</title>
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACION -->
+  <nav>
+    <span>RecetaHub</span>
+    <a href="#">Catalogo</a>
+    <a href="#" class="activo">Mi Perfil</a>
+    <a href="#">+ Nueva Receta</a>
+    <span>Jorge M.</span>
+  </nav>
+
+  <div id="contenedor">
+
+    <!-- MENU LATERAL -->
+    <aside>
+
+      <!-- Datos del chef -->
+      <div id="perfil">
+        <p>JM</p>
+        <p>Jorge Montoya</p>
+        <p>Chef Verificado</p>
+      </div>
+
+      <!-- Estadisticas rapidas -->
+      <div id="stats-rapidas">
+        <p>Recetas: 12</p>
+        <p>Seguidores: 438</p>
+        <p>Valoracion: 4.6</p>
+      </div>
+
+      <!-- Menu del panel -->
+      <ul>
+        <li class="activo">Mis Recetas</li>
+        <li>Validar Recetas</li>
+        <li>Comentarios</li>
+        <li>Configuracion</li>
+      </ul>
+
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+      <!-- TARJETAS DE ESTADISTICAS -->
+      <section id="estadisticas">
+        <div>
+          <p>12</p>
+          <p>Publicadas</p>
+        </div>
+        <div>
+          <p>3</p>
+          <p>Borradores</p>
+        </div>
+        <div>
+          <p>291</p>
+          <p>Guardados por otros</p>
+        </div>
+      </section>
+
+      <!-- TABLA DE RECETAS -->
+      <section id="mis-recetas">
+        <h3>Mis Recetas</h3>
+
+        <!-- Buscador -->
+        <input type="text" placeholder="Buscar mis recetas...">
+        <a href="#">+ Nueva Receta</a>
+
+        <!-- Tabla -->
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Tipo</th>
+              <th>Dificultad</th>
+              <th>Valoracion</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gallo Pinto Gourmet</td>
+              <td>Desayuno</td>
+              <td>Facil</td>
+              <td>4.2</td>
+              <td>Publicada</td>
+              <td>
+                <button type="button">Editar</button>
+                <button type="button">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Pasta Carbonara</td>
+              <td>Almuerzo</td>
+              <td>Medio</td>
+              <td>4.9</td>
+              <td>Publicada</td>
+              <td>
+                <button type="button">Editar</button>
+                <button type="button">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Ceviche Tropical</td>
+              <td>Entrada</td>
+              <td>Medio</td>
+              <td>-</td>
+              <td>Borrador</td>
+              <td>
+                <button type="button">Editar</button>
+                <button type="button">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Tres Leches Especial</td>
+              <td>Postre</td>
+              <td>Dificil</td>
+              <td>5.0</td>
+              <td>Publicada</td>
+              <td>
+                <button type="button">Editar</button>
+                <button type="button">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Risotto de Champinones</td>
+              <td>Almuerzo</td>
+              <td>Avanzado</td>
+              <td>-</td>
+              <td>Pendiente</td>
+              <td>
+                <button type="button">Ver</button>
+                <button type="button">Eliminar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </section>
+
+    </main>
+
+  </div><!-- fin contenedor -->
+
+</body>
+</html>
