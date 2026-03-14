@@ -47,8 +47,7 @@
                 <img src="assets/imgs/libro-de-cocina.png" alt="Información General" style="height: 40px;">
               </div>
                 <label for="titulo">Nombre de la Receta *</label>
-                <input type="text" placeholder="Ej: Gallo Pinto">
-                <!-- El placeholde se usa para mostrar un ejemplo de lo que se espera -->
+                <input type="text" placeholder="Ej: Gallo Pinto"> <!-- El placeholde se usa para mostrar un ejemplo de lo que se espera -->
 
                 <label>Tipo de Plato *</label>
                 <select>
@@ -79,13 +78,19 @@
 
             <!-- Seccion de Imagenes-->
             <section>
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
                 <h3>Imágenes de la receta</h3>
+                <img src="assets/imgs/img_rec.png" alt="Imágenes de la receta" style="height: 40px;">
+              </div>
                 <input type="file" accept="image/*">
             </section>
 
             <!-- Seccion deIngredientes -->
             <section>
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
                 <h3>Ingredientes</h3>
+                <img src="assets/imgs/iNGREDIENTES.png" alt="Ingredientes" style="height: 40px;">
+              </div>
                 <table> <!-- La tabla se utiliza para organizar los ingredientes en filas y columnas -->
                     <thead>
                         <!-- El thead se utiliza para definir el encabezado de la tabla, cada columna tiene un título que describe el tipo de información que se espera en esa columna -->
@@ -137,7 +142,10 @@
 
             <!-- Seccion de Instrucciones -->
             <section>
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
                 <h3>Instrucciones</h3>
+                <img src="assets/imgs/iNSTRUCIONES.png" alt="Instrucciones" style="height: 40px;">
+              </div>
                 <ol> <!-- El ol se utiliza para crear una lista ordenada, cada paso de la receta se muestra como un elemento de la lista -->
                     <li><textarea placeholder="Paso 1: ..."></textarea></li>
                     <li><textarea placeholder="Paso 2: ..."></textarea></li>
