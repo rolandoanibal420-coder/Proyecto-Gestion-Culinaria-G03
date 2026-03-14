@@ -1,156 +1,165 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Registrar Receta - Chef</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Receta- Mi Chef</title>
+    <link rel="stylesheet" href="Nueva_Receta_Test.css">
+
+    <!--FrontAwesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
+
 <body>
+    <!-- Barra de Navegación -->
+    <nav>
+        <div style="display: flex; align-items: center;">
+            <h2 style="margin-right: 10px;">Registrar Receta </h2>
+            <a href="#">Catalogo </a>
+            <a href="#">Mi Perfil </a>
+            <a href="#"> + Nueva Receta</a>
+            <img src="assets/imgs/receta.png" alt="Receta" style="height: 40px; margin-left: auto;">
+            <span>Mi Chef</span> <!--El span se utiliza para mostrar el nombre del usuario -->
+        </div>
 
-  <!-- BARRA DE NAVEGACION -->
-  <nav>
-    <span>RecetaHub</span>
-    <a href="#">Catalogo</a>
-    <a href="#">Mi Perfil</a>
-    <a href="#" class="activo">+ Nueva Receta</a>
-    <span>Jorge M.</span>
-  </nav>
+        <!-- Menu Lateral  -->
+        <p>Mis Recetas</p>
+        <ul>
+            <li>Publicaciones (16)</li>
+            <li>Borradores (4)</li>
+            <li><a href="#"> + Nueva Receta</a></li>
+        </ul>
+        <!-- Contenido Principal-->
+        <main>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+            <h2>Registrar Nueva Receta</h2>
+            <img src="assets/imgs/libro-de-recetas.png" alt="Nueva Receta" style="height: 40px;">
+          </div>
+          <p>Los espacion con * son obligatorios.</p>
+            
 
-  <div id="contenedor">
+            <!-- Seccion de informacion en general -->
+            <section>
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                <h3>Información General</h3>
+                <img src="assets/imgs/libro-de-cocina.png" alt="Información General" style="height: 40px;">
+              </div>
+                <label for="titulo">Nombre de la Receta *</label>
+                <input type="text" placeholder="Ej: Gallo Pinto">
+                <!-- El placeholde se usa para mostrar un ejemplo de lo que se espera -->
 
-    <!-- MENU LATERAL -->
-    <aside>
-      <p>MIS RECETAS</p>
-      <ul>
-        <li>Publicadas (12)</li>
-        <li>Borradores (3)</li>
-        <li class="activo">+ Nueva Receta</li>
-      </ul>
-    </aside>
+                <label>Tipo de Plato *</label>
+                <select>
+                    <option value="">Seleccione un tipo</option>
+                    <option>Desayuno</option>
+                    <option>Almuerzo</option>
+                    <option>Cena</option>
+                    <option>Postre</option>
+                </select>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main>
-      <h2>Nueva Receta</h2>
-      <p>Los campos con * son obligatorios</p>
+                <label>Dificultad *</label>
+                <select>
+                    <option value="">Seleccione una dificultad</option>
+                    <option>Fácil</option>
+                    <option>Media</option>
+                    <option>Difícil</option>
+                </select>
 
-      <form>
+                <label>Tiempo de Preparación *</label>
+                <input type="text" placeholder="Ej: 30 min">
 
-        <!-- SECCION: INFORMACION GENERAL -->
-        <section>
-          <h3>Informacion General</h3>
+                <label>Porciones</label>
+                <input type="number" placeholder="Ej: 4">
 
-          <label>Nombre de la receta *</label>
-          <input type="text" placeholder="Ej: Gallo Pinto Gourmet">
+                <label>Descripción</label>
+                <textarea placeholder="Describe tu receta..."></textarea>
+            </section>
 
-          <label>Tipo de plato *</label>
-          <select>
-            <option>Seleccionar</option>
-            <option>Desayuno</option>
-            <option>Almuerzo</option>
-            <option>Cena</option>
-            <option>Postre</option>
-          </select>
+            <!-- Seccion de Imagenes-->
+            <section>
+                <h3>Imágenes de la receta</h3>
+                <input type="file" accept="image/*">
+            </section>
 
-          <label>Dificultad *</label>
-          <select>
-            <option>Seleccionar</option>
-            <option>Facil</option>
-            <option>Intermedio</option>
-            <option>Avanzado</option>
-          </select>
+            <!-- Seccion deIngredientes -->
+            <section>
+                <h3>Ingredientes</h3>
+                <table> <!-- La tabla se utiliza para organizar los ingredientes en filas y columnas -->
+                    <thead>
+                        <!-- El thead se utiliza para definir el encabezado de la tabla, cada columna tiene un título que describe el tipo de información que se espera en esa columna -->
+                        <tr> <!-- El tr se utiliza para definir una fila en la tabla, cada fila representa un ingrediente diferente -->
+                            <th>Ingrediente</th>
+                            <th>Cantidad</th>
+                            <th>Unidad</th>
+                            <th>Costo</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
 
-          <label>Tiempo de preparacion (minutos) *</label>
-          <input type="number" placeholder="30">
+                    <tbody>
+                        <!-- El tbody se utiliza para agrupar el contenido principal de la tabla, cada fila dentro del tbody representa un ingrediente diferente con sus detalles correspondientes -->
+                        <tr> <!-- El tr se utiliza para definir una fila en la tabla, cada fila representa un ingrediente diferente -->
+                            <td><input type="text" placeholder="Ej: Arroz"></td>
+                            <td><input type="number" placeholder="Ej: 2"></td>
+                            <td> <!-- El td se utiliza para definir una celda en la tabla, cada celda representa un campo específico del ingrediente -->
+                                <select>
+                                    <!-- El select se utiliza para crear un menú desplegable, el usuario puede seleccionar la unidad de medida que corresponda al ingrediente -->
+                                    <option>Tazas</option>
+                                    <option>Gramos</option>
+                                    <option>Unidades</option>
+                                </select>
+                            </td>
+                            <td><input type="number" placeholder="Ej: 1.50"></td>
+                            <td><button type="button">X</button> </td>
+                        </tr>
 
-          <label>Porciones *</label>
-          <input type="number" placeholder="4">
+                        <tr>
+                            <td><input type="text" placeholder="Ej: Arroz"></td>
+                            <td><input type="number" placeholder="Ej: 2"></td>
+                            <td>
+                                <select>
+                                    <option>Tazas</option>
+                                    <option>Gramos</option>
+                                    <option>Unidades</option>
+                                </select>
+                            </td>
+                            <td><input type="number" placeholder="Ej: 1.50"></td>
+                            <td><button type="button">X</button> </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button">+ Agregar Ingrediente</button>
+                <!-- El button se utiliza para crear un botón que permite al usuario agregar más ingredientes a la tabla -->
+                <p>Total del Costo: $3.00</p>
+            </section>
 
-          <label>Descripcion</label>
-          <textarea rows="3" placeholder="Describe brevemente la receta..."></textarea>
-        </section>
+            <!-- Seccion de Instrucciones -->
+            <section>
+                <h3>Instrucciones</h3>
+                <ol> <!-- El ol se utiliza para crear una lista ordenada, cada paso de la receta se muestra como un elemento de la lista -->
+                    <li><textarea placeholder="Paso 1: ..."></textarea></li>
+                    <li><textarea placeholder="Paso 2: ..."></textarea></li>
+                    <li><textarea placeholder="Paso 3: ..."></textarea></li>
+                </ol>
+                <button type="button">+ Agregar Paso</button>
+            </section>
 
-        <!-- SECCION: IMAGEN -->
-        <section>
-          <h3>Imagen de la Receta</h3>
-          <input type="file" accept="image/*">
-        </section>
+            <!-- Botones de Guardar y Publicar -->
+            <section>
+                <div style="margin-top: 20px;">
+                    <!-- El div se utiliza para agrupar los botones de guardar y publicar, se le da un margen superior para separarlos del resto del contenido -->
+                    <button type="button">Guardar Borrador</button>
+                    <button type="button">Publicar Receta</button>
+                </div>
+            </section>
 
-        <!-- SECCION: INGREDIENTES -->
-        <section>
-          <h3>Ingredientes</h3>
 
-          <table border="1">
-            <thead>
-              <tr>
-                <th>Ingrediente</th>
-                <th>Cantidad</th>
-                <th>Unidad</th>
-                <th>Costo estimado</th>
-                <th>Eliminar</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><input type="text" placeholder="Ej: Arroz"></td>
-                <td><input type="number" placeholder="2"></td>
-                <td>
-                  <select>
-                    <option>tazas</option>
-                    <option>gramos</option>
-                    <option>unidades</option>
-                  </select>
-                </td>
-                <td><input type="number" placeholder="200"></td>
-                <td><button type="button">X</button></td>
-              </tr>
-              <tr>
-                <td><input type="text" placeholder="Ej: Frijoles"></td>
-                <td><input type="number" placeholder="1"></td>
-                <td>
-                  <select>
-                    <option>tazas</option>
-                    <option>gramos</option>
-                    <option>unidades</option>
-                  </select>
-                </td>
-                <td><input type="number" placeholder="150"></td>
-                <td><button type="button">X</button></td>
-              </tr>
-            </tbody>
-          </table>
+        </main>
 
-          <button type="button">+ Agregar ingrediente</button>
-          <p>Costo estimado por porcion: ₡200</p>
-        </section>
-
-        <!-- SECCION: PASOS -->
-        <section>
-          <h3>Instrucciones paso a paso</h3>
-
-          <ol>
-            <li>
-              <textarea rows="2" placeholder="Describe el paso 1..."></textarea>
-            </li>
-            <li>
-              <textarea rows="2" placeholder="Describe el paso 2..."></textarea>
-            </li>
-            <li>
-              <textarea rows="2" placeholder="Describe el paso 3..."></textarea>
-            </li>
-          </ol>
-
-          <button type="button">+ Agregar paso</button>
-        </section>
-
-        <!-- BOTONES FINALES -->
-        <section>
-          <button type="button">Guardar borrador</button>
-          <button type="submit">Publicar receta</button>
-        </section>
-
-      </form>
-    </main>
-
-  </div><!-- fin contenedor -->
+    </nav>
 
 </body>
+
 </html>
