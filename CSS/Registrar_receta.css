@@ -1,18 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap');
 
 /* ══════════════════════════════════════════
    VARIABLES DE COLOR
 ══════════════════════════════════════════ */
 :root {
-  --chef:       #C85A1A;
-  --user:       #2D5016;
-  --light:      #F5F5F5;
-  --border:     #E0E0E0;
-  --wire:       #999;
+  --chef: #C85A1A;
+  --user: #2D5016;
+  --light: #F5F5F5;
+  --border: #E0E0E0;
+  --wire: #999;
   --wire-light: #CCC;
-  --mid:        #666;
-  --dark:       #1A1208;
+  --mid: #666;
+  --dark: #1A1208;
 }
- 
+
 /* ══════════════════════════════════════════
    RESET Y BASE
 ══════════════════════════════════════════ */
@@ -21,12 +22,12 @@
   padding: 0;
   box-sizing: border-box;
 }
- 
+
 body {
   font-family: 'DM Sans', sans-serif;
   background: #F9F9F9;
 }
- 
+
 /* ══════════════════════════════════════════
    NAVBAR  →  <nav>
    El <nav> en este HTML envuelve TODO el contenido,
@@ -36,68 +37,68 @@ nav {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: #F9F9F9;
+  background: #fbf8f8;
 }
- 
+
 /* ── Barra superior: primer <div> dentro de nav ── */
-nav > div:first-child {
+nav>div:first-child {
   display: flex;
   align-items: center;
   gap: 16px;
-  background: white;
+  background: rgb(253, 251, 251);
   border-bottom: 1px solid var(--border);
   padding: 0 20px;
   height: 52px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 4px rgba(244, 242, 242, 0.06);
   flex-shrink: 0;
 }
- 
+*/
 /* Título en la barra superior */
-nav > div:first-child h2 {
+nav>div:first-child h2 {
   font-size: 18px;
   font-weight: 700;
   color: var(--dark);
   margin-right: 6px;
   white-space: nowrap;
 }
- 
+
 /* Links de navegación */
-nav > div:first-child a {
+nav>div:first-child a {
   font-size: 13px;
   color: var(--mid);
   text-decoration: none;
   cursor: pointer;
   white-space: nowrap;
 }
- 
-nav > div:first-child a:hover {
+
+nav>div:first-child a:hover {
   color: var(--chef);
 }
- 
+
 /* Imagen/logo */
-nav > div:first-child img {
+nav>div:first-child img {
   height: 36px;
   margin-left: auto;
   opacity: 0.85;
 }
- 
+
 /* Nombre del usuario */
-nav > div:first-child span {
+nav>div:first-child span {
   font-size: 13px;
   font-weight: 600;
   color: var(--dark);
   white-space: nowrap;
 }
- 
+
 /* ══════════════════════════════════════════
    SIDEBAR + MAIN
    El <p>, <ul> y <main> están sueltos dentro
    de <nav>; se posicionan como sidebar fijo
    a la izquierda y main con margen.
 ══════════════════════════════════════════ */
- 
+
 /* Etiqueta "Mis Recetas" */
-nav > p {
+nav>p {
   position: fixed;
   top: 52px;
   left: 0;
@@ -112,9 +113,9 @@ nav > p {
   color: var(--wire);
   letter-spacing: 0.8px;
 }
- 
+
 /* Menú lateral */
-nav > ul {
+nav>ul {
   position: fixed;
   top: calc(52px + 38px);
   left: 0;
@@ -124,10 +125,10 @@ nav > ul {
   min-height: calc(100vh - 90px);
   list-style: none;
   padding: 6px 0;
-  box-shadow: 1px 0 4px rgba(0,0,0,0.04);
+  box-shadow: 1px 0 4px rgba(0, 0, 0, 0.04);
 }
- 
-nav > ul li {
+
+nav>ul li {
   padding: 9px 16px;
   font-size: 13px;
   color: var(--mid);
@@ -135,32 +136,32 @@ nav > ul li {
   border-radius: 0;
   transition: background 0.15s;
 }
- 
-nav > ul li:hover {
+
+nav>ul li:hover {
   background: var(--light);
 }
- 
+
 /* Primer ítem activo */
-nav > ul li:first-child {
+nav>ul li:first-child {
   color: var(--dark);
   font-weight: 600;
   border-left: 3px solid var(--chef);
   background: #FFF5F0;
 }
- 
+
 /* Último ítem con link */
-nav > ul li:last-child {
+nav>ul li:last-child {
   color: var(--chef);
   font-weight: 600;
 }
- 
-nav > ul li a {
+
+nav>ul li a {
   color: var(--chef);
   text-decoration: none;
   font-weight: 600;
   font-size: 13px;
 }
- 
+
 /* ══════════════════════════════════════════
    CONTENIDO PRINCIPAL  →  <main>
 ══════════════════════════════════════════ */
@@ -170,34 +171,34 @@ main {
   max-width: 1060px;
   flex: 1;
 }
- 
+
 /* Encabezado de main: div con h2 + img */
-main > div:first-child {
+main>div:first-child {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 6px;
 }
- 
-main > div:first-child h2 {
+
+main>div:first-child h2 {
   font-size: 22px;
   font-weight: 700;
   color: var(--dark);
 }
- 
-main > div:first-child img {
+
+main>div:first-child img {
   height: 36px;
   opacity: 0.85;
 }
- 
+
 /* Aviso de campos obligatorios */
-main > p {
+main>p {
   font-size: 12px;
   color: var(--wire);
   margin-bottom: 24px;
   font-style: italic;
 }
- 
+
 /* ══════════════════════════════════════════
    SECCIONES DEL FORMULARIO  →  <section>
 ══════════════════════════════════════════ */
@@ -208,9 +209,9 @@ main section {
   border-radius: 6px;
   padding: 18px;
 }
- 
+
 /* Encabezado de cada sección: div con h3 + img */
-main section > div:first-child {
+main section>div:first-child {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -218,8 +219,8 @@ main section > div:first-child {
   padding-bottom: 10px;
   border-bottom: 1px solid var(--border);
 }
- 
-main section > div:first-child h3 {
+
+main section>div:first-child h3 {
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
@@ -227,12 +228,12 @@ main section > div:first-child h3 {
   color: var(--wire);
   margin: 0;
 }
- 
-main section > div:first-child img {
+
+main section>div:first-child img {
   height: 32px;
   opacity: 0.8;
 }
- 
+
 /* ══════════════════════════════════════════
    ETIQUETAS Y CAMPOS
 ══════════════════════════════════════════ */
@@ -246,11 +247,11 @@ main section label {
   margin-bottom: 4px;
   margin-top: 12px;
 }
- 
+
 main section label:first-of-type {
   margin-top: 0;
 }
- 
+
 main section input[type="text"],
 main section input[type="number"],
 main section select,
@@ -265,7 +266,7 @@ main section textarea {
   font-family: 'DM Sans', sans-serif;
   transition: border-color 0.2s;
 }
- 
+
 main section input[type="text"]:focus,
 main section input[type="number"]:focus,
 main section select:focus,
@@ -274,17 +275,17 @@ main section textarea:focus {
   border-color: var(--chef);
   background: white;
 }
- 
+
 main section input::placeholder,
 main section textarea::placeholder {
   color: var(--wire-light);
 }
- 
+
 main section textarea {
   height: 80px;
   resize: vertical;
 }
- 
+
 main section input[type="file"] {
   font-size: 13px;
   color: var(--mid);
@@ -295,7 +296,7 @@ main section input[type="file"] {
   padding: 0;
   width: auto;
 }
- 
+
 /* ══════════════════════════════════════════
    TABLA DE INGREDIENTES  →  <table>
 ══════════════════════════════════════════ */
@@ -305,12 +306,12 @@ main section table {
   font-size: 12px;
   margin-bottom: 10px;
 }
- 
+
 main section table thead tr {
   background: var(--light);
   border-bottom: 2px solid var(--border);
 }
- 
+
 main section table thead th {
   padding: 8px 10px;
   text-align: left;
@@ -320,24 +321,24 @@ main section table thead th {
   letter-spacing: 0.5px;
   color: var(--mid);
 }
- 
+
 main section table tbody tr {
   border-bottom: 1px solid var(--border);
 }
- 
+
 main section table tbody tr:last-child {
   border-bottom: none;
 }
- 
+
 main section table tbody tr:hover {
   background: #FAFAFA;
 }
- 
+
 main section table tbody td {
   padding: 6px 8px;
   color: var(--dark);
 }
- 
+
 /* Inputs y selects dentro de la tabla */
 main section table tbody td input[type="text"],
 main section table tbody td input[type="number"] {
@@ -345,13 +346,13 @@ main section table tbody td input[type="number"] {
   font-size: 12px;
   width: 100%;
 }
- 
+
 main section table tbody td select {
   padding: 5px 8px;
   font-size: 12px;
   width: 100%;
 }
- 
+
 /* Botón X de eliminar ingrediente */
 main section table tbody td button {
   background: transparent;
@@ -365,13 +366,13 @@ main section table tbody td button {
   transition: background 0.2s, color 0.2s;
   margin-top: 0;
 }
- 
+
 main section table tbody td button:hover {
   background: #FFE5E5;
   color: #CC0000;
   border-color: #CC0000;
 }
- 
+
 /* ══════════════════════════════════════════
    LISTA DE INSTRUCCIONES  →  <ol>
 ══════════════════════════════════════════ */
@@ -379,24 +380,24 @@ main section ol {
   padding-left: 20px;
   margin-bottom: 10px;
 }
- 
+
 main section ol li {
   margin-bottom: 10px;
   color: var(--dark);
   font-size: 13px;
 }
- 
+
 main section ol li textarea {
   margin-top: 4px;
   height: 60px;
   width: 100%;
 }
- 
+
 /* ══════════════════════════════════════════
    BOTÓN "+ AGREGAR INGREDIENTE / PASO"
    (botón directo hijo de section)
 ══════════════════════════════════════════ */
-main section > button[type="button"] {
+main section>button[type="button"] {
   display: inline-block;
   padding: 8px 16px;
   font-size: 12px;
@@ -410,29 +411,29 @@ main section > button[type="button"] {
   transition: background 0.2s, border-color 0.2s;
   margin-top: 6px;
 }
- 
-main section > button[type="button"]:hover {
+
+main section>button[type="button"]:hover {
   background: #FFF5F0;
 }
- 
+
 /* Total del costo */
-main section > p {
+main section>p {
   font-size: 12px;
   color: var(--mid);
   margin-top: 8px;
   font-weight: 600;
 }
- 
+
 /* ══════════════════════════════════════════
    BOTONES GUARDAR / PUBLICAR
    (última section → div → buttons)
 ══════════════════════════════════════════ */
-main section:last-child > div {
+main section:last-child>div {
   display: flex;
   gap: 10px;
   margin-top: 0;
 }
- 
+
 main section:last-child button[type="button"]:first-child {
   padding: 10px 20px;
   font-size: 12px;
@@ -445,11 +446,11 @@ main section:last-child button[type="button"]:first-child {
   font-family: 'DM Sans', sans-serif;
   transition: background 0.2s;
 }
- 
+
 main section:last-child button[type="button"]:first-child:hover {
   background: var(--light);
 }
- 
+
 main section:last-child button[type="button"]:last-child {
   padding: 10px 24px;
   font-size: 12px;
@@ -462,7 +463,7 @@ main section:last-child button[type="button"]:last-child {
   font-family: 'DM Sans', sans-serif;
   transition: background 0.2s, border-color 0.2s;
 }
- 
+
 main section:last-child button[type="button"]:last-child:hover {
   background: #A84010;
   border-color: #A84010;
