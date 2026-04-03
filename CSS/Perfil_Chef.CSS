@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+ 
+/* ══════════════════════════════════════════
+   VARIABLES DE COLOR
+══════════════════════════════════════════ */
+:root {
+  --bg:         #F5F0E8;
+  --surface:    #FDFAF4;
+  --border:     #D4C9B0;
+  --light:      #E8DFC8;
+  --dark:       #1A1208;
+  --mid:        #5C4A2A;
+  --wire:       #A09070;
+  --wire-light: #D4C9B0;
+  --chef:       #C85A1A;
+  --user:       #3D6B4F;
+  --admin:      #4A3A7A;
+}
+ 
+/* ══════════════════════════════════════════
+   RESET Y BASE
+══════════════════════════════════════════ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+  min-height: 100vh;
+}
+ 
+/* ══════════════════════════════════════════
+   NAVBAR  →  <nav>
+══════════════════════════════════════════ */
+nav {
+  background: var(--dark);
+  padding: 0 20px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 3px solid var(--chef);
+}
+ 
+/* Logo: primer <span> dentro de nav */
+nav > span:first-child {
+  font-family: 'Playfair Display', serif;
+  color: #F5F0E8;
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+ 
+/* Links de navegación */
+nav a {
+  color: rgba(245,240,232,0.6);
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 2px;
+  text-decoration: none;
+  cursor: default;
+}
+ 
+nav a.activo {
+  color: #F5F0E8;
+  background: rgba(255,255,255,0.1);
+}
+ 
+/* Nombre del usuario: último <span> de nav */
+nav > span:last-child {
+  margin-left: auto;
+  color: #F5F0E8;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--chef);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+/* ══════════════════════════════════════════
+   CONTENEDOR PRINCIPAL  →  #contenedor
+══════════════════════════════════════════ */
+#contenedor {
+  display: flex;
+  min-height: calc(100vh - 52px);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+ 
+/* ══════════════════════════════════════════
+   ASIDE (MENÚ LATERAL)  →  <aside>
+══════════════════════════════════════════ */
+aside {
+  width: 220px;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  flex-shrink: 0;
+  padding: 0;
+}
+ 
+/* ── Perfil del Chef  →  #perfil ── */
+#perfil {
+  text-align: center;
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+ 
+/* Iniciales del avatar: primer <p> de #perfil */
+#perfil p:first-child {
+  width: 56px;
+  height: 56px;
+  background: var(--chef);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 auto 8px;
+}
+ 
+/* Nombre: segundo <p> */
+#perfil p:nth-child(2) {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dark);
+}
+ 
+/* Rol / verificado: tercer <p> */
+#perfil p:nth-child(3) {
+  font-size: 10px;
+  color: var(--user);
+  margin-top: 4px;
+}
+ 
+/* ── Estadísticas rápidas  →  #stats-rapidas ── */
+#stats-rapidas {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+ 
+#stats-rapidas p {
+  padding: 7px 16px;
+  font-size: 11px;
+  color: var(--mid);
+  display: flex;
+  justify-content: space-between;
+}
+ 
+/* ── Menú de navegación lateral  →  aside ul ── */
+aside ul {
+  list-style: none;
+  padding: 4px 0;
+}
+ 
+aside ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  font-size: 12px;
+  color: var(--mid);
+  cursor: default;
+}
+ 
+aside ul li.activo {
+  background: var(--light);
+  color: var(--dark);
+  font-weight: 600;
+  border-left: 3px solid var(--chef);
+}
+ 
+/* ══════════════════════════════════════════
+   CONTENIDO PRINCIPAL  →  <main>
+══════════════════════════════════════════ */
+main {
+  flex: 1;
+  padding: 24px;
+}
+ 
+/* ══════════════════════════════════════════
+   TARJETAS DE ESTADÍSTICAS  →  #estadisticas
+══════════════════════════════════════════ */
+#estadisticas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+ 
+#estadisticas div {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 4px;
+  padding: 14px;
+}
+ 
+/* Número grande */
+#estadisticas div p:first-child {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  color: var(--dark);
+}
+ 
+/* Etiqueta */
+#estadisticas div p:last-child {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--wire);
+  margin-top: 4px;
+}
+ 
+/* ══════════════════════════════════════════
+   SECCIÓN "MIS RECETAS"  →  #mis-recetas
+══════════════════════════════════════════ */
+#mis-recetas {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 16px;
+}
+ 
+#mis-recetas h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: var(--dark);
+  margin-bottom: 14px;
+}
+ 
+/* ── Buscador  →  input[type="text"] ── */
+#mis-recetas input[type="text"] {
+  width: calc(100% - 150px);
+  background: var(--light);
+  border: 1.5px solid var(--border);
+  border-radius: 3px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--dark);
+  margin-bottom: 12px;
+  outline: none;
+}
+ 
+#mis-recetas input[type="text"]::placeholder {
+  color: var(--wire);
+}
+ 
+/* ── Botón "+ Nueva Receta" ── */
+#mis-recetas a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 3px;
+  cursor: default;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: var(--user);
+  color: white;
+  text-decoration: none;
+  margin-left: 8px;
+  margin-bottom: 12px;
+}
+ 
+/* ── Tabla  →  table ── */
+#mis-recetas table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  border: none;
+}
+ 
+#mis-recetas th {
+  background: var(--light);
+  padding: 8px 10px;
+  text-align: left;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--mid);
+  border-bottom: 2px solid var(--border);
+  font-weight: 700;
+}
+ 
+#mis-recetas td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--wire-light);
+  color: var(--dark);
+}
+ 
+#mis-recetas tr:last-child td {
+  border-bottom: none;
+}
+ 
+#mis-recetas tbody tr:hover td {
+  background: var(--light);
+}
+ 
+/* ── Botones de acción dentro de la tabla ── */
+#mis-recetas button {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  border: 1.5px solid var(--border);
+  border-radius: 3px;
+  background: var(--surface);
+  color: var(--mid);
+  cursor: pointer;
+  margin-right: 4px;
+  transition: background 0.15s;
+}
+ 
+#mis-recetas button:hover {
+  background: var(--light);
+  color: var(--dark);
+}
+ 
+/* Botón Eliminar con acento rojo suave */
+#mis-recetas button:last-child {
+  border-color: #e8c8b8;
+  color: var(--chef);
+}
+ 
+#mis-recetas button:last-child:hover {
+  background: #FDDBC8;
+}
