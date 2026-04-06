@@ -68,3 +68,15 @@ footer {
     color: var(--primary-chef); /* Color naranja al pasar el mouse */
 }
 
+
+.tabla-gestion { width: 100%; border-collapse: collapse; margin-top: 20px; }
+.tabla-gestion th, .tabla-gestion td { border: 1px solid #333; padding: 10px; text-align: left; }
+
+.formulario-receta { margin-top: 20px; }
+.grupo-entrada { margin-bottom: 15px; }
+.boton-guardar { padding: 8px 15px; background-color: #333; color: white; border: none; cursor: pointer; }
+
+.receta-completa img { border-radius: 5px; margin-bottom: 15px; }
+
+.contenedor-dias { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
+.dia-caja { border: 1px solid #ccc; padding: 10px; background-color: #fafafa; border-radius: 4px; }

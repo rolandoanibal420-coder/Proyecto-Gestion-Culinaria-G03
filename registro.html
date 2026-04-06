@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nueva Receta - RecetaHub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo"><h1>RecetaHub</h1></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Catálogo</a></li>
+                <li><a href="registro.html">Nueva Receta</a></li>
+                <li><a href="dashboard.html">Panel Chef</a></li>
+                <li><a href="detalle.html">Ver Receta</a></li>
+                <li><a href="planificador.html">Planificador</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Agregar Nueva Receta</h2>
+        <form class="formulario-receta">
+            <div class="grupo-entrada">
+                <label>Nombre del plato:</label> <br>
+                <input type="text" name="nombre_plato" placeholder="Ej: Gallo Pinto">
+            </div>
+
+            <div class="grupo-entrada">
+                <label>Categoría:</label> <br>
+                <select name="categoria">
+                    <option value="desayuno">Desayuno</option>
+                    <option value="almuerzo">Almuerzo</option>
+                    <option value="postre">Postre</option>
+                </select>
+            </div>
+
+            <div class="grupo-entrada">
+                <label>Instrucciones de preparación:</label> <br>
+                <textarea name="instrucciones" rows="6" cols="40"></textarea>
+            </div>
+
+            <div class="grupo-entrada">
+                <label>Subir foto de la receta:</label> <br>
+                <input type="file" name="foto_receta">
+            </div>
+
+            <button type="submit" class="boton-guardar">Guardar Receta</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Grupo 03: Diseño y Programación Web</p>
+    </footer>
+</body>
+</html>
