@@ -12,3 +12,6 @@
 
 4. **Seguridad y Sesiones**
    - El sistema debe realizar el cierre automático de sesiones tras 30 minutos de inactividad para proteger la integridad de las cuentas de usuario.
+
+5. **Calidad de Interfaz e Imágenes (NUEVO)**
+   - Todos los recursos visuales, iconos y capturas de los wireframes deben presentarse en alta resolución (mínimo 2x de densidad de píxeles) para asegurar la claridad de los textos y elementos gráficos en pantallas de alta definición.

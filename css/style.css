@@ -1,0 +1,82 @@
+:root {
+    --primary-chef: #d35400;    /* Naranja Café para el Chef ☕ */
+    --secondary-user: #27ae60;  /* Verde para el Usuario 🌿 */
+    --bg-light: #f9f9f9;
+    --text-dark: #2c3e50;       /* Contraste 4.5:1 asegurado */
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--white);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    color: var(--primary-chef);
+    margin: 0;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    background-color: var(--bg-light);
+    color: var(--primary-chef); /* Color naranja al pasar el mouse */
+}
+
+
+.tabla-gestion { width: 100%; border-collapse: collapse; margin-top: 20px; }
+.tabla-gestion th, .tabla-gestion td { border: 1px solid #333; padding: 10px; text-align: left; }
+
+.formulario-receta { margin-top: 20px; }
+.grupo-entrada { margin-bottom: 15px; }
+.boton-guardar { padding: 8px 15px; background-color: #333; color: white; border: none; cursor: pointer; }
+
+.receta-completa img { border-radius: 5px; margin-bottom: 15px; }
+
+.contenedor-dias { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
+.dia-caja { border: 1px solid #ccc; padding: 10px; background-color: #fafafa; border-radius: 4px; }
