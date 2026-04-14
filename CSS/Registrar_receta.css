@@ -1,22 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap');
-
-/* ══════════════════════════════════════════
+/* ===========================================
    VARIABLES DE COLOR
-══════════════════════════════════════════ */
+=============================================== */
 :root {
-  --chef: #C85A1A;
-  --user: #2D5016;
-  --light: #F5F5F5;
+  --orange: #C85A1A;
+  --white: #F5F5F5;
   --border: #E0E0E0;
-  --wire: #999;
-  --wire-light: #CCC;
-  --mid: #666;
-  --dark: #1A1208;
+  --gray-light: #999;
+  --gray: #666;
+  --black: #1A1208;
+  --bg: #F5F0E8;
+   --white_light: #FDFAF4;
+  --red: #CC0000;
 }
 
-/* ══════════════════════════════════════════
+/* ===========================================
    RESET Y BASE
-══════════════════════════════════════════ */
+=========================================== */
 * {
   margin: 0;
   padding: 0;
@@ -25,77 +24,70 @@
 
 body {
   font-family: 'DM Sans', sans-serif;
-  background: #F9F9F9;
+  background: var(--bg);
 }
 
-/* ══════════════════════════════════════════
+/* ===========================================
    NAVBAR  →  <nav>
-   El <nav> en este HTML envuelve TODO el contenido,
-   así que actúa como contenedor raíz de layout.
-══════════════════════════════════════════ */
+=========================================== */
 nav {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  background: #fbf8f8;
+  background: var(--bg);
 }
 
 /* ── Barra superior: primer <div> dentro de nav ── */
-nav>div:first-child {
+nav>div {
   display: flex;
   align-items: center;
   gap: 16px;
-  background: rgb(253, 251, 251);
-  border-bottom: 1px solid var(--border);
+  background: var(--black);
+  border-bottom: 3px solid var(--orange);
   padding: 0 20px;
   height: 52px;
-  box-shadow: 0 1px 4px rgba(244, 242, 242, 0.06);
-  flex-shrink: 0;
+  flex: 0; 
 }
-*/
+
 /* Título en la barra superior */
-nav>div:first-child h2 {
+nav>div h2 {
   font-size: 18px;
   font-weight: 700;
-  color: var(--dark);
+  color: var(--white);
   margin-right: 6px;
   white-space: nowrap;
+  font-family: 'Playfair Display', serif;
 }
 
 /* Links de navegación */
-nav>div:first-child a {
+nav>div a {
   font-size: 13px;
-  color: var(--mid);
+  color: var(--gray);
   text-decoration: none;
   cursor: pointer;
   white-space: nowrap;
 }
-
-nav>div:first-child a:hover {
-  color: var(--chef);
+nav>div a.Activo {
+  color: var(--white);
+  background: var(--orange);
+  padding: 4px 8px;
+  border-radius: 2px;
 }
 
 /* Imagen/logo */
-nav>div:first-child img {
+nav>div img {
   height: 36px;
   margin-left: auto;
   opacity: 0.85;
 }
 
 /* Nombre del usuario */
-nav>div:first-child span {
+nav>div span {
   font-size: 13px;
   font-weight: 600;
-  color: var(--dark);
+  color: var(--white);
   white-space: nowrap;
 }
 
-/* ══════════════════════════════════════════
-   SIDEBAR + MAIN
-   El <p>, <ul> y <main> están sueltos dentro
-   de <nav>; se posicionan como sidebar fijo
-   a la izquierda y main con margen.
-══════════════════════════════════════════ */
 
 /* Etiqueta "Mis Recetas" */
 nav>p {
@@ -103,68 +95,55 @@ nav>p {
   top: 52px;
   left: 0;
   width: 200px;
-  background: white;
+  background: var(--white);
   border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 14px 16px 6px;
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--wire);
+  color: var(--gray-light);
   letter-spacing: 0.8px;
 }
 
 /* Menú lateral */
 nav>ul {
   position: fixed;
-  top: calc(52px + 38px);
+  top: 90px;
   left: 0;
   width: 200px;
-  background: white;
+  background: var(--white);
   border-right: 1px solid var(--border);
-  min-height: calc(100vh - 90px);
-  list-style: none;
+  height: 590px;
   padding: 6px 0;
-  box-shadow: 1px 0 4px rgba(0, 0, 0, 0.04);
 }
 
 nav>ul li {
   padding: 9px 16px;
   font-size: 13px;
-  color: var(--mid);
-  cursor: pointer;
+  color: var(--gray);
   border-radius: 0;
-  transition: background 0.15s;
-}
-
-nav>ul li:hover {
-  background: var(--light);
 }
 
 /* Primer ítem activo */
-nav>ul li:first-child {
-  color: var(--dark);
+nav>ul li.pb {
+  color: var(--black);
   font-weight: 600;
-  border-left: 3px solid var(--chef);
+  border-left: 3px solid var(--black);
   background: #FFF5F0;
 }
 
-/* Último ítem con link */
-nav>ul li:last-child {
-  color: var(--chef);
-  font-weight: 600;
-}
 
 nav>ul li a {
-  color: var(--chef);
+  color: var(--orange);
   text-decoration: none;
   font-weight: 600;
   font-size: 13px;
 }
 
-/* ══════════════════════════════════════════
+/* ===========================================
    CONTENIDO PRINCIPAL  →  <main>
-══════════════════════════════════════════ */
+=========================================== */
 main {
   margin-left: 200px;
   padding: 28px 32px;
@@ -173,45 +152,46 @@ main {
 }
 
 /* Encabezado de main: div con h2 + img */
-main>div:first-child {
+main>div {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 6px;
+  height: 40px;
 }
 
-main>div:first-child h2 {
+main>div h2 {
   font-size: 22px;
   font-weight: 700;
-  color: var(--dark);
+  color: var(--black );
 }
 
-main>div:first-child img {
-  height: 36px;
-  opacity: 0.85;
+main>div img {
+  height: 40px;
+
 }
 
 /* Aviso de campos obligatorios */
 main>p {
   font-size: 12px;
-  color: var(--wire);
+  color: var(--red);
   margin-bottom: 24px;
   font-style: italic;
 }
 
-/* ══════════════════════════════════════════
+/* ===========================================
    SECCIONES DEL FORMULARIO  →  <section>
-══════════════════════════════════════════ */
+=========================================== */
 main section {
   margin-bottom: 20px;
-  background: white;
+  background: var(--white);
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 18px;
 }
 
 /* Encabezado de cada sección: div con h3 + img */
-main section>div:first-child {
+main section>div {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -220,36 +200,31 @@ main section>div:first-child {
   border-bottom: 1px solid var(--border);
 }
 
-main section>div:first-child h3 {
+main section>div h3 {
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  color: var(--wire);
+  color: var(--orange);
   margin: 0;
 }
 
-main section>div:first-child img {
-  height: 32px;
-  opacity: 0.8;
+main section>div img {
+  height: 3px;
 }
 
-/* ══════════════════════════════════════════
+/* ===========================================
    ETIQUETAS Y CAMPOS
-══════════════════════════════════════════ */
+=========================================== */
 main section label {
   display: block;
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: var(--mid);
+  color: var(--gray);
   margin-bottom: 4px;
   margin-top: 12px;
-}
-
-main section label:first-of-type {
-  margin-top: 0;
 }
 
 main section input[type="text"],
@@ -259,57 +234,37 @@ main section textarea {
   width: 100%;
   padding: 8px 12px;
   font-size: 13px;
-  color: var(--dark);
-  background: var(--light);
+  color: var(--black);
+  background: var(--white);
   border: 1.5px solid var(--border);
   border-radius: 4px;
   font-family: 'DM Sans', sans-serif;
-  transition: border-color 0.2s;
-}
-
-main section input[type="text"]:focus,
-main section input[type="number"]:focus,
-main section select:focus,
-main section textarea:focus {
-  outline: none;
-  border-color: var(--chef);
-  background: white;
 }
 
 main section input::placeholder,
 main section textarea::placeholder {
-  color: var(--wire-light);
-}
-
-main section textarea {
-  height: 80px;
-  resize: vertical;
+  color: var(--border);
 }
 
 main section input[type="file"] {
   font-size: 13px;
-  color: var(--mid);
+  color: var(--gray);
   margin-top: 6px;
-  cursor: pointer;
+
   background: transparent;
   border: none;
   padding: 0;
   width: auto;
 }
 
-/* ══════════════════════════════════════════
+/* ===========================================
    TABLA DE INGREDIENTES  →  <table>
-══════════════════════════════════════════ */
+=========================================== */
 main section table {
   width: 100%;
-  border-collapse: collapse;
+  border: var(--border) 1px solid;
   font-size: 12px;
   margin-bottom: 10px;
-}
-
-main section table thead tr {
-  background: var(--light);
-  border-bottom: 2px solid var(--border);
 }
 
 main section table thead th {
@@ -319,63 +274,29 @@ main section table thead th {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: var(--mid);
+  color: var(--gray);
 }
 
-main section table tbody tr {
-  border-bottom: 1px solid var(--border);
-}
-
-main section table tbody tr:last-child {
-  border-bottom: none;
-}
-
-main section table tbody tr:hover {
-  background: #FAFAFA;
-}
-
-main section table tbody td {
-  padding: 6px 8px;
-  color: var(--dark);
-}
-
-/* Inputs y selects dentro de la tabla */
-main section table tbody td input[type="text"],
-main section table tbody td input[type="number"] {
-  padding: 5px 8px;
-  font-size: 12px;
-  width: 100%;
-}
-
-main section table tbody td select {
-  padding: 5px 8px;
-  font-size: 12px;
-  width: 100%;
-}
 
 /* Botón X de eliminar ingrediente */
 main section table tbody td button {
   background: transparent;
-  border: 1px solid var(--wire-light);
-  color: var(--wire);
+  border: 1px solid var(--border);
+  color: var(--gray-light);
   padding: 4px 8px;
   border-radius: 3px;
   font-size: 12px;
   font-weight: 700;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
   margin-top: 0;
+  margin-left: 20px;
+  
 }
 
-main section table tbody td button:hover {
-  background: #FFE5E5;
-  color: #CC0000;
-  border-color: #CC0000;
-}
 
-/* ══════════════════════════════════════════
+/* ===========================================
    LISTA DE INSTRUCCIONES  →  <ol>
-══════════════════════════════════════════ */
+=========================================== */
 main section ol {
   padding-left: 20px;
   margin-bottom: 10px;
@@ -383,7 +304,7 @@ main section ol {
 
 main section ol li {
   margin-bottom: 10px;
-  color: var(--dark);
+  color: var(--black);
   font-size: 13px;
 }
 
@@ -393,10 +314,9 @@ main section ol li textarea {
   width: 100%;
 }
 
-/* ══════════════════════════════════════════
-   BOTÓN "+ AGREGAR INGREDIENTE / PASO"
-   (botón directo hijo de section)
-══════════════════════════════════════════ */
+/* ===========================================
+   BOTÓN " DE AGREGAR INGREDIENTE 
+=========================================== */
 main section>button[type="button"] {
   display: inline-block;
   padding: 8px 16px;
@@ -404,67 +324,35 @@ main section>button[type="button"] {
   font-weight: 600;
   border-radius: 4px;
   cursor: pointer;
-  border: 1.5px solid var(--chef);
-  background: white;
-  color: var(--chef);
+  border: 1.5px solid var(--orange);
+  background:var(--white);
+  color: var(--orange);
   font-family: 'DM Sans', sans-serif;
-  transition: background 0.2s, border-color 0.2s;
   margin-top: 6px;
-}
-
-main section>button[type="button"]:hover {
-  background: #FFF5F0;
 }
 
 /* Total del costo */
 main section>p {
   font-size: 12px;
-  color: var(--mid);
+  color: var(--gray);
   margin-top: 8px;
   font-weight: 600;
 }
 
-/* ══════════════════════════════════════════
+/* ===========================================
    BOTONES GUARDAR / PUBLICAR
-   (última section → div → buttons)
-══════════════════════════════════════════ */
-main section:last-child>div {
-  display: flex;
-  gap: 10px;
-  margin-top: 0;
-}
+=========================================== */
 
-main section:last-child button[type="button"]:first-child {
-  padding: 10px 20px;
-  font-size: 12px;
-  font-weight: 600;
-  border-radius: 4px;
-  cursor: pointer;
-  border: 1.5px solid var(--border);
-  background: white;
-  color: var(--mid);
-  font-family: 'DM Sans', sans-serif;
-  transition: background 0.2s;
-}
 
-main section:last-child button[type="button"]:first-child:hover {
-  background: var(--light);
-}
-
-main section:last-child button[type="button"]:last-child {
+main section button[type="button"] {
   padding: 10px 24px;
   font-size: 12px;
   font-weight: 600;
   border-radius: 4px;
   cursor: pointer;
-  border: 1.5px solid var(--chef);
-  background: var(--chef);
-  color: white;
+  border: 1.5px solid var(--black);
+  background: var(--orange);
+  color: var(--white);
   font-family: 'DM Sans', sans-serif;
-  transition: background 0.2s, border-color 0.2s;
 }
 
-main section:last-child button[type="button"]:last-child:hover {
-  background: #A84010;
-  border-color: #A84010;
-}

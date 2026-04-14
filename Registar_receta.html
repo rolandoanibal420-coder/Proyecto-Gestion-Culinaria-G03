@@ -19,12 +19,12 @@
 <body>
     <!-- Barra de Navegación -->
     <nav>
-        <div style="display: flex; align-items: center;">
-            <h2 style="margin-right: 10px;">Receta Hub </h2>
+        <div>
+            <h2>🍽 RecetaHub </h2>
             <a href="#">Catalogo </a>
             <a href="Perfil_Chef.HTML">Perfil del Chef </a>
-            <a href="Registar_receta.html"> + Nueva Receta</a>
-            <img src="assets/imgs/receta.png" alt="Receta" style="height: 40px; margin-left: auto;">
+            <a href="Registar_receta.html" class="Activo"> + Nueva Receta</a>
+            <img src="assets/imgs/receta.png" alt="LogoReceta"> 
             <span>Mi Chef</span> <!--El span se utiliza para mostrar el nombre del usuario -->
         </div>
 
@@ -32,15 +32,15 @@
         <!-- Menu Lateral  -->
         <p>Mis Recetas</p>
         <ul>
-            <li>Publicaciones (16)</li>
+            <li class="pb">Publicaciones (16)</li>
             <li>Borradores (4)</li>
-            <li><a href="#"> + Nueva Receta</a></li>
+            <li><a href="#nr"> + Nueva Receta</a></li>
         </ul>
         <!-- Contenido Principal-->
         <main>
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+            <div>
                 <h2>Registrar Nueva Receta</h2>
-                <img src="assets/imgs/libro-de-recetas.png" alt="Nueva Receta" style="height: 40px;">
+                <img src="assets/imgs/libro-de-recetas.png" alt="Nueva Receta"  >
             </div>
             <p>Los espacion con * son obligatorios.</p>
 
@@ -48,12 +48,12 @@
 
             <!-- Seccion de informacion en general -->
             <section>
-                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                <div>
                     <h3>Información General</h3>
-                    <img src="assets/imgs/libro-de-cocina.png" alt="Información General" style="height: 40px;">
+                    <img src="assets/imgs/libro-de-cocina.png" alt="Información General">
                 </div>
                 <label for="titulo">Nombre de la Receta *</label>
-                <input type="text" placeholder="Ej: Gallo Pinto">
+                <input type="text" placeholder="Ej: Gallo Pinto" id="nr">
                 <!-- El placeholde se usa para mostrar un ejemplo de lo que se espera -->
 
 
@@ -91,9 +91,9 @@
 
             <!-- Seccion de Imagenes-->
             <section>
-                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                <div>
                     <h3>Imágenes de la receta</h3>
-                    <img src="assets/imgs/img_rec.png" alt="Imágenes de la receta" style="height: 40px;">
+                    <img src="assets/imgs/img_rec.png" alt="Imágenes de la receta">
                 </div>
                 <input type="file" accept="image/*">
             </section>
@@ -101,9 +101,9 @@
 
             <!-- Seccion deIngredientes -->
             <section>
-                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                <div>
                     <h3>Ingredientes</h3>
-                    <img src="assets/imgs/iNGREDIENTES.png" alt="Ingredientes" style="height: 40px;">
+                    <img src="assets/imgs/iNGREDIENTES.png" alt="Ingredientes" >
                 </div>
                 <table> <!-- La tabla se utiliza para organizar los ingredientes en filas y columnas -->
                     <thead>
