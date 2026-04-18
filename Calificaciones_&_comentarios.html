@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calificaciones - RecetaHub</title>
+    <link rel="stylesheet" href="CSS/Calificacion_&_comentarios.css">
+</head>
+<body>
+ 
+    <nav>
+        <span>🍽 RecetaHub</span>
+        <a href="#">Catálogo</a>
+        <a href="#">Favoritos</a>
+        <a href="#" class="activo">Calificaciones</a>
+        <span class="ID">CF</span>
+    </nav>
+ 
+    <div id="contenedor">
+ 
+        <aside>
+            <div id="perfil">
+                <p>Pasta Carbonara</p>
+                <p class="VF">Chef Carlos Fuentes ✓</p>
+            </div>
+            <ul>
+                <li>📋 Descripción</li>
+                <li>🧂 Ingredientes</li>
+                <li>👣 Pasos</li>
+                <li class="activo">⭐ Calificaciones</li>
+                <li>♡ Guardar</li>
+                <li>📅 Planificador</li>
+            </ul>
+        </aside>
+ 
+        <main>
+ 
+            <h2>Pasta Carbonara Clásica</h2>
+            <div class="etiquetas">
+                <span class="tag">🟡 Medio</span>
+                <span class="tag">⏱ 40 min</span>
+                <span class="tag">Chef: Carlos Fuentes ✓</span>
+            </div>
+ 
+            <!-- Resumen -->
+            <section>
+                <h3>Resumen de Calificaciones</h3>
+                <div class="card resumen">
+                    <div class="score">
+                        <p class="num">4.9</p>
+                        <p class="estrellas">★★★★★</p>
+                        <p class="sub">87 calificaciones</p>
+                    </div>
+                    <div class="barras">
+                        <div class="barra-row"><span>5</span><div class="track"><div class="fill" style="width:80%"></div></div><span>70</span></div>
+                        <div class="barra-row"><span>4</span><div class="track"><div class="fill" style="width:12%"></div></div><span>10</span></div>
+                        <div class="barra-row"><span>3</span><div class="track"><div class="fill" style="width:6%"></div></div><span>5</span></div>
+                        <div class="barra-row"><span>2</span><div class="track"><div class="fill" style="width:2%"></div></div><span>2</span></div>
+                        <div class="barra-row"><span>1</span><div class="track"><div class="fill" style="width:0%"></div></div><span>0</span></div>
+                    </div>
+                </div>
+            </section>
+ 
+            <!-- Formulario -->
+            <section>
+                <h3>Tu Calificación</h3>
+                <div class="card">
+                    <p class="estrellas" style="margin-bottom:10px;">★★★★<span style="color:var(--border);">★</span></p>
+                    <div class="form-grid">
+                        <div>
+                            <label>Tu nombre *</label>
+                            <input type="text" placeholder="María Rodríguez">
+                        </div>
+                        <div>
+                            <label>¿La preparaste? *</label>
+                            <select><option>Sí, la preparé</option><option>No, aún no</option></select>
+                        </div>
+                    </div>
+                    <label>Comentario *</label>
+                    <textarea placeholder="Escribe tu reseña aquí..."></textarea>
+                    <div class="acciones">
+                        <button type="button" class="btn-sec">Cancelar</button>
+                        <button type="button" class="btn-pri">Publicar</button>
+                    </div>
+                </div>
+            </section>
+ 
+            <!-- Comentarios -->
+            <section>
+                <h3>Comentarios (87)</h3>
+ 
+                <div class="card comentario">
+                    <div class="com-header">
+                        <div class="avatar">AG</div>
+                        <span class="nombre">Ana García</span>
+                        <span class="tag">Usuario</span>
+                        <span class="fecha">15 Feb 2026</span>
+                    </div>
+                    <p class="estrellas">★★★★★</p>
+                    <p class="com-titulo">La mejor carbonara que he probado</p>
+                    <p class="com-texto">Seguí los pasos exactamente y quedó espectacular.</p>
+                    <div class="respuesta-chef">
+                        <p class="chef-label">🍽 Chef Jorge Montoya respondió:</p>
+                        <p>¡Muchas gracias Ana! El secreto está en no exponer el huevo al calor directo.</p>
+                    </div>
+                </div>
+ 
+                <div class="card comentario">
+                    <div class="com-header">
+                        <div class="avatar">CR</div>
+                        <span class="nombre">Carlos Ramírez</span>
+                        <span class="tag">Usuario</span>
+                        <span class="fecha">10 Feb 2026</span>
+                    </div>
+                    <p class="estrellas">★★★★<span style="color:var(--border);">★</span></p>
+                    <p class="com-titulo">Muy buena, le agregué champiñones</p>
+                    <p class="com-texto">La hice con champiñones salteados y quedó excelente.</p>
+                </div>
+ 
+                <div class="card comentario">
+                    <div class="com-header">
+                        <div class="avatar">LM</div>
+                        <span class="nombre">Laura Méndez</span>
+                        <span class="tag">Usuario</span>
+                        <span class="fecha">5 Feb 2026</span>
+                    </div>
+                    <p class="estrellas">★★★<span style="color:var(--border);">★★</span></p>
+                    <p class="com-titulo">Buena pero me quedó un poco seca</p>
+                    <p class="com-texto">El sabor estuvo rico pero me quedó seca.</p>
+                </div>
+ 
+                <div class="paginacion">
+                    <button type="button" class="btn-sec">← Ant.</button>
+                    <button type="button" class="btn-pri">1</button>
+                    <button type="button" class="btn-sec">2</button>
+                    <button type="button" class="btn-sec">3</button>
+                    <button type="button" class="btn-sec">Sig. →</button>
+                </div>
+            </section>
+ 
+        </main>
+    </div>
+ 
+</body>
+</html>
