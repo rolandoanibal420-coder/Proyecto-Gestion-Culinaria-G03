@@ -14,6 +14,7 @@
   --green: #3D6B4F;
   --gray: #7A7A7A;
   --white: #FFFFFF;
+  --star: #E8A020;  
 }
 
 /* ========================================
@@ -264,3 +265,62 @@ main {
   border-color: var(--border);
   color: var(--orange);
 }
+
+
+/*=================================================
+  Calificaciones y comentarios
+  ===============================================*/
+/* === MAIN === */
+main { flex: 1; padding: 24px; }
+main h2 { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--black); margin-bottom: 10px; }
+section { margin-bottom: 20px; }
+section h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--light_brown); padding-bottom: 6px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+
+
+/* Etiquetas */
+.etiquetas { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; }
+.tag { background: var(--light); color: var(--brown); padding: 4px 10px; border-radius: 2px; font-size: 11px; font-weight: 600; border: 1px solid var(--border); }
+ 
+/* === CARD BASE === */
+.card { background: var(--white_light); border: 1.5px solid var(--border); border-radius: 4px; padding: 16px; margin-bottom: 10px; }
+ 
+/* === RESUMEN === */
+.resumen { display: flex; gap: 24px; align-items: center; }
+.score { text-align: center; flex-shrink: 0; }
+.score .num { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 700; color: var(--black); line-height: 1; }
+.score .sub { font-size: 11px; color: var(--light_brown); }
+.barras { flex: 1; }
+.barra-row { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; font-size: 11px; color: var(--brown); }
+.track { flex: 1; height: 10px; background: var(--light); border-radius: 2px; border: 1px solid var(--border); overflow: hidden; }
+.fill { height: 100%; background: var(--brown); border-radius: 2px; }
+ 
+/* === FORMULARIO === */
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 10px; }
+label { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; color: var(--light_brown); margin-bottom: 4px; }
+input, select, textarea {
+  width: 100%; background: var(--light); border: 1.5px solid var(--border);
+  border-radius: 3px; padding: 8px 12px; font-size: 12px; font-family: 'DM Sans', sans-serif;
+  color: var(--black); outline: none; margin-bottom: 10px;
+}
+textarea { min-height: 70px; resize: vertical; }
+.acciones { display: flex; gap: 8px; justify-content: flex-end; }
+ 
+/* === BOTONES (mismo estilo que Perfil_Chef) === */
+.btn-pri { padding: 7px 16px; font-size: 12px; font-weight: 600; background: var(--green); color: var(--white); border: none; border-radius: 3px; cursor: default; }
+.btn-sec { padding: 7px 16px; font-size: 12px; font-weight: 600; background: var(--white_light); color: var(--brown); border: 1.5px solid var(--border); border-radius: 3px; cursor: default; }
+ 
+/* === COMENTARIOS === */
+.com-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.avatar { width: 28px; height: 28px; border-radius: 50%; background: var(--light); color: var(--brown); font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border); flex-shrink: 0; }
+.nombre { font-size: 12px; font-weight: 600; color: var(--black); }
+.fecha { margin-left: auto; font-size: 10px; color: var(--light_brown); }
+.estrellas { color: var(--star); font-size: 14px; margin-bottom: 4px; }
+.com-titulo { font-size: 12px; font-weight: 600; color: var(--black); margin-bottom: 4px; }
+.com-texto { font-size: 12px; color: var(--brown); line-height: 1.6; }
+ 
+/* Respuesta del chef */
+.respuesta-chef { border-left: 3px solid var(--orange); background: #FDF5EF; padding: 10px 12px; margin-top: 10px; border-radius: 0 3px 3px 0; font-size: 11px; color: var(--brown); }
+.chef-label { font-size: 10px; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 4px; }
+ 
+/* Paginación */
+.paginacion { display: flex; gap: 4px; justify-content: center; margin-top: 16px; }
