@@ -17,3 +17,6 @@
 
 * **RF-06: Formulario de Calificación y Reseñas (Usuario)**
   Interfaz dedicada que permite al usuario asignar una valoración numérica (sistema de 1 a 5 estrellas) y redactar un comentario de texto sobre su experiencia con la receta. Incluye validación para evitar reseñas vacías.
+
+* **RF-07: Perfil del Chef (Usuario)**
+  Perfil publico del Chef donde se muestra informacion sobre cantidad der rectas, seguidores y publicaciones realizadas, donde los usuarios pedan ver el nombre de la receta, el tipo, dificultad y las valoraciones recibidads de cada receta publicada, el estado: si ya se publico o esta en edicion. El usuario podra decidir si eliminar la receta o editarla segun su conveniencia. Tendra la oportunidad de crear una nueva receta y compartirla con el chef.

@@ -11,6 +11,7 @@
   --bg: #F5F0E8;
    --white_light: #FDFAF4;
   --red: #CC0000;
+    --gray_light: #7f8c8d;
 }
 
 /* ===========================================
@@ -356,3 +357,4 @@ main section button[type="button"] {
   font-family: 'DM Sans', sans-serif;
 }
 
+footer {text-align: center; padding: 2rem; font-size: 0.9rem; color: var(--gray_light);}

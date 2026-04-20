@@ -15,6 +15,7 @@
   --gray: #7A7A7A;
   --white: #FFFFFF;
   --star: #E8A020;  
+  --gray_light: #7f8c8d;
 }
 
 /* ========================================
@@ -324,3 +325,5 @@ textarea { min-height: 70px; resize: vertical; }
  
 /* Paginación */
 .paginacion { display: flex; gap: 4px; justify-content: center; margin-top: 16px; }
+
+footer {text-align: center; padding: 2rem; font-size: 0.9rem; color: var(--gray_light);}
