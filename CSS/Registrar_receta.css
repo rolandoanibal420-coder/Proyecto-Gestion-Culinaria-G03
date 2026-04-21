@@ -46,7 +46,6 @@ nav>div {
   align-items: center;
   gap: 16px;
   background: var(--black);
-  height: 52px;
   border-bottom: 3px solid var(--orange);
   flex: 0; 
 
