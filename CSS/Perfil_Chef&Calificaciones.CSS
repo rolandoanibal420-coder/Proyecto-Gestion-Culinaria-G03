@@ -38,7 +38,7 @@ body {
 nav {
   background: var(--black);
   padding: 0 20px;
-  height: 52px;
+  height: 82px;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -326,4 +326,5 @@ textarea { min-height: 70px; resize: vertical; }
 /* Paginación */
 .paginacion { display: flex; gap: 4px; justify-content: center; margin-top: 16px; }
 
-footer {text-align: center; padding: 2rem; font-size: 0.9rem; color: var(--gray_light);}
+footer {
+text-align: center; padding: 2rem; font-size: 0.9rem; color: var(--gray_light);}

@@ -35,18 +35,22 @@ nav {
   display: flex;
   flex-direction: column;
   background: var(--bg);
+
 }
 
 /* ── Barra superior: primer <div> dentro de nav ── */
 nav>div {
   display: flex;
+  padding: 0 20px;
+  height: 52px;
   align-items: center;
   gap: 16px;
   background: var(--black);
-  border-bottom: 3px solid var(--orange);
-  padding: 0 20px;
   height: 52px;
+  border-bottom: 3px solid var(--orange);
   flex: 0; 
+
+
 }
 
 /* Título en la barra superior */
