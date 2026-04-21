@@ -1,10 +1,10 @@
-// asi podemos eliminar una receta si quisieramos, es algo meramente visual.
+// asi podemos eliminar una receta si quisieramos, es algo meramente visual y de confirmacion.
 function eliminarReceta(boton) {
     let confirmar = confirm("¿vas a eliminar la receta?");
-
+// el confim es una funcion nativa de los navegadores web que nos permiten mostrar al usuario un boton de confirmacion
     if (confirmar) {
   
-        let fila = boton.parentNode.parentNode;
+        let fila = boton.parentNode.parentNode; //eliminar el registro entero de la tabla
         
         fila.remove();
         
