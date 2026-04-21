@@ -23,7 +23,6 @@ function limpiarDia(boton) {
 }
 
 function guardarReceta() {
-    // Usamos 'nr' porque es el ID que Charlie eligió
     let nombre = document.getElementById('nr').value; 
     
     if (nombre.trim() === "") {
@@ -31,17 +30,14 @@ function guardarReceta() {
         return;
     }
 
-    alert("¡Excelente, Rolando!\nLa receta de '" + nombre + "' ha sido registrada.");
+    alert("¡Excelente, Chef!\nLa receta de '" + nombre + "' ha sido registrada.");
     
-    // Opcional: limpiar el campo después de guardar
     document.getElementById('nr').value = "";
 }
 
 // Función para confirmar el envío de una calificación/comentario
 function confirmarComentario() {
-    // Mostramos un mensaje de confirmación
-    alert("¡Gracias por tu reseña, Rolando!\nTu comentario sobre la Pasta Carbonara ha sido publicado con éxito.");
+    alert("¡Gracias por tu reseña, Maria!\nTu comentario sobre la Pasta Carbonara ha sido publicado con éxito.");
     
-    // Opcional: Podés simular que el formulario se limpia
     console.log("Comentario enviado al servidor.");
 }
