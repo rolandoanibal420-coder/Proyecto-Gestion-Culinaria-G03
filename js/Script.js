@@ -36,3 +36,12 @@ function guardarReceta() {
     // Opcional: limpiar el campo después de guardar
     document.getElementById('nr').value = "";
 }
+
+// Función para confirmar el envío de una calificación/comentario
+function confirmarComentario() {
+    // Mostramos un mensaje de confirmación
+    alert("¡Gracias por tu reseña, Rolando!\nTu comentario sobre la Pasta Carbonara ha sido publicado con éxito.");
+    
+    // Opcional: Podés simular que el formulario se limpia
+    console.log("Comentario enviado al servidor.");
+}
