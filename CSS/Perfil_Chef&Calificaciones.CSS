@@ -15,6 +15,7 @@
   --gray: #7A7A7A;
   --white: #FFFFFF;
   --star: #E8A020;  
+  --gray_light: #7f8c8d;
 }
 
 /* ========================================
@@ -37,7 +38,7 @@ body {
 nav {
   background: var(--black);
   padding: 0 20px;
-  height: 52px;
+  height: 82px;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -324,3 +325,6 @@ textarea { min-height: 70px; resize: vertical; }
  
 /* Paginación */
 .paginacion { display: flex; gap: 4px; justify-content: center; margin-top: 16px; }
+
+footer {
+text-align: center; padding: 2rem; font-size: 0.9rem; color: var(--gray_light);}

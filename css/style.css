@@ -4,11 +4,14 @@
     --bg-light: #f9f9f9;
     --text-dark: #2c3e50;       /* Contraste 4.5:1 asegurado */
     --white: #ffffff;
+    --bg: #F5F0E8;
+    --black: #1A1208;
+     --orange: #C85A1A;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-light);
+    background-color: var(--bg);
     color: var(--text-dark);
     margin: 0;
     padding: 0;
@@ -16,9 +19,10 @@ body {
 }
 
 header {
-    background-color: var(--white);
+    background-color: var(--black);
     padding: 1rem 2rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-bottom: 3px solid var(--orange);
 }
 
 header h1 {
@@ -44,6 +48,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .nav-links {
@@ -56,7 +61,7 @@ footer {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-dark);
+    color: var(--white);
     font-weight: 600;
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
