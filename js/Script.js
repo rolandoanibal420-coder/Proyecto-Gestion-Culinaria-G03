@@ -21,3 +21,18 @@ function limpiarDia(boton) {
     
     console.log("Día limpiado");
 }
+
+function guardarReceta() {
+    // Usamos 'nr' porque es el ID que Charlie eligió
+    let nombre = document.getElementById('nr').value; 
+    
+    if (nombre.trim() === "") {
+        alert("Por favor, ponle un nombre a tu receta.");
+        return;
+    }
+
+    alert("¡Excelente, Rolando!\nLa receta de '" + nombre + "' ha sido registrada.");
+    
+    // Opcional: limpiar el campo después de guardar
+    document.getElementById('nr').value = "";
+}
