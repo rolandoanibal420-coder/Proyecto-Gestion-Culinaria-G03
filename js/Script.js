@@ -11,3 +11,13 @@ function eliminarReceta(boton) {
         alert("¡Receta eliminada!");
     }
 }
+
+
+// limpia la receta asignada a un día
+function limpiarDia(boton) {
+    let spanReceta = boton.parentNode.querySelector('span');
+    
+    spanReceta.innerText = "Pendiente de asignar";
+    
+    console.log("Día limpiado");
+}
